@@ -32,7 +32,7 @@ After sourcing it you call "say_hello" function again on console it will execute
 
 # Problem statement
 We are sourcing "crda.sh" file from "entrypoint.sh", which is called while starting the container, so functions defined in "crda.sh" should be available and user should be able to call it from the container console but for some reason it is not found 
-If function is available in container it means it can be called by chield conatiner created by Tekton as weel. 
+If function is available in container it means it can be called by chield conatiner created by Tekton as well. 
 
 
 
