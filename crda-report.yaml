@@ -1,3 +1,8 @@
+# Add task
+# $kubectl apply -f crda-report.yaml -n tekton-pipelines
+# Start the task
+#$ tkn task start --showlog -n tekton-pipelines crda-report
+
 apiVersion: tekton.dev/v1beta1
 kind: Task
 
