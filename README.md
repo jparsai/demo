@@ -3,15 +3,15 @@
 1. Build the image 
 
 ```
-docker build . -t <IMAGE_NAME>
+$docker build . -t <IMAGE_NAME>
 ```
 2. Run the image
 ```
-docker run --name crda <IMAGE_NAME>
+$docker run --name crda <IMAGE_NAME>
 ```
-3. Login to running container
+3. Login to running container, we have given 10 min sleep in entrypoint.sh so container will be running for 10 min for debugging.
 ```
-docker exec -it crda /bin/bash
+$docker exec -it crda /bin/bash
 ```
 Now you are inside the container and you can call function available within container like "crda auth", "crda analyse" etc.
 
@@ -32,7 +32,7 @@ After sourcing it you call "say_hello" function again on console it will execute
 
 # Problem statement
 We are sourcing "crda.sh" file from "entrypoint.sh", which is called while starting the container, so functions defined in "crda.sh" should be available and user should be able to call it from the container console but for some reason it is not found 
-
+If function is available in container it means it can be called by chield conatiner created by Tekton as weel. 
 
 
 
