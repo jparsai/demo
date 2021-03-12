@@ -1,0 +1,14 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+
+metadata:
+  name: crda-report
+
+spec:
+  steps:
+    - name: crda-report
+      image: quay.io/jparsai/crdaimagev1:latest
+      command: ['/bin/bash', '-c']
+      args:
+        - say_hello
+        #- pwd
