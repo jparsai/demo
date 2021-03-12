@@ -1,3 +1,7 @@
+# Objective
+Export a custom function from container which can be called by subprocess using the container.
+
+
 # Steps to run
 
 1. Build the image 
